@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowBoard – Simple Kanban Board for Team Task Tracking</title>
+    <meta
+      name="description"
+      content="FlowBoard is a free kanban board for small teams. Drag and drop cards between To Do, In Progress and Done, set priorities, assignees and due dates."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0369a1" />
+    <link rel="canonical" href="%SITE_URL%/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FlowBoard" />
+    <meta property="og:title" content="FlowBoard – Simple Kanban Board for Team Task Tracking" />
+    <meta
+      property="og:description"
+      content="Drag-and-drop kanban board for small teams: prioritise work, assign owners and never miss a due date."
+    />
+    <meta property="og:url" content="%SITE_URL%/" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="%SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FlowBoard – simple kanban board for team task tracking" />
+    <meta name="twitter:image" content="%SITE_URL%/og-image.png" />
+    <meta name="twitter:title" content="FlowBoard – Simple Kanban Board for Team Task Tracking" />
+    <meta
+      name="twitter:description"
+      content="Drag-and-drop kanban board for small teams: prioritise work, assign owners and never miss a due date."
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "FlowBoard",
+        "url": "%SITE_URL%/",
+        "description": "A kanban board for small teams to track tasks across To Do, In Progress and Done columns, with priorities, assignees and due dates.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any (web browser)",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "Drag-and-drop cards between columns",
+          "Priority levels: Low, Medium, High",
+          "Assignees and due dates with overdue highlighting",
+          "Keyboard and screen reader accessible"
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Non-blocking font load: system fonts render first, Inter swaps in. -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      />
+    </noscript>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Crawler/no-JS fallback; replaced as soon as React mounts. -->
+      <main>
+        <h1>FlowBoard</h1>
+        <p>
+          FlowBoard is a simple kanban board for small teams. Organise work into To Do, In
+          Progress and Done columns, drag cards between them, and track priority, assignee and
+          due date for every task.
+        </p>
+        <noscript><p>Please enable JavaScript to use FlowBoard.</p></noscript>
+      </main>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

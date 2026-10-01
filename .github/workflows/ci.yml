@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      # Tests mock Supabase (see vitest.config.ts), so no secrets are needed.
+      - name: Unit tests
+        run: npm run test:unit
+      - name: Regression tests
+        run: npm run test:regression
+      # The build only needs placeholder values to satisfy the config check in
+      # src/lib/supabase.ts. Real values live in Vercel's environment settings.
+      - name: Build
+        run: npm run build
+        env:
+          VITE_SUPABASE_URL: https://placeholder.supabase.co
+          VITE_SUPABASE_PUBLISHABLE_KEY: placeholder
