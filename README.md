@@ -30,3 +30,8 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## CI/CD
+
+- **GitHub Actions** (`.github/workflows/ci.yml`) runs lint, unit tests (`npm run test:unit`), regression tests (`npm run test:regression`) and a build on every push to `main` and every pull request.
+- **Vercel** is connected to this repo: every push to `main` deploys to production, and other branches/PRs get preview deployments. `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` are set in the Vercel project settings.
